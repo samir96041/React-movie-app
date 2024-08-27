@@ -1,0 +1,36 @@
+.search-results-container2 {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.movie-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.movie-card2 {
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.movie-poster2 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-title2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.movie-rating2 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ccc;
+}
