@@ -40,7 +40,7 @@ const Homepage = () => {
               className="movie-poster"
             />
             <h2 className="movie-title" >{movie.title}</h2>
-            <p className="movie-rating">Rating: {movie.vote_average}</p>
+            <p className="movie-rating">Rating: {movie.vote_average.toFixed(1)}</p>
           </div>
           </Link>
         ))}
