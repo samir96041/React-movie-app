@@ -6,13 +6,14 @@ nav {
     color: white;
     position: sticky;
     top: 0;
-    padding: 0 20px;
+    padding: 10px 20px; /* Adjust padding for better responsiveness */
+    z-index: 1000; /* Ensure navbar stays on top */
 }
 
 nav .title {
     font-size: 1.5rem;
     margin: 0.5rem;
-    padding-left: 100px;
+    padding-left: 10px; /* Reduce padding for smaller screens */
     text-decoration: none;
     color: white;
 }
@@ -21,13 +22,12 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-left: 100px;
-   
+    padding-left: 20px; /* Adjust padding for better alignment */
+    transition: all 0.3s ease; /* Smooth transition for menu open/close */
 }
 
 nav ul li {
     list-style: none;
-    
 }
 
 nav ul li a {
@@ -52,19 +52,23 @@ nav .menu {
     justify-content: space-between;
     width: 2.25rem;
     height: 2rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure menu icon stays on top */
 }
 
 nav .menu span {
-    height: 0.4rem;
+    height: 0.3rem;
     width: 100%;
     background-color: #fff;
     border-radius: 0.2rem;
+    transition: all 0.3s ease; /* Smooth animation for menu icon */
 }
 
 .search-form {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    transition: all 0.3s ease; /* Smooth transition for search form */
 }
 
 .search-input {
@@ -73,6 +77,8 @@ nav .menu span {
     border: none;
     font-size: 1rem;
     margin-right: 0.5rem;
+    width: 200px; /* Set a fixed width for the input */
+    transition: width 0.3s ease; /* Smooth width transition */
 }
 
 .search-button {
@@ -85,50 +91,60 @@ nav .menu span {
 }
 
 .search-button:hover {
-    background-color: #6c757d;
+    background-color: #5a6268;
 }
 
-@media (max-width: 480px) {
-    nav .menu {
-        display: flex;
-    }
-
+/* Responsive Styles */
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    nav .title {
+        padding-left: 20px;
+    }
+
     nav ul {
-        display: none;
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
-        margin-bottom: 0.25rem;
+        display: none; /* Hide the menu initially */
+        background-color: #343a40;
+        margin-top: 10px;
     }
 
     nav ul.open {
-        display: flex;
+        display: flex; /* Show the menu when open */
     }
 
     nav ul li {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        margin: 5px 0;
     }
 
     nav ul li a {
-        margin: 0.2rem 0.5rem;
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    nav .menu {
+        display: flex; /* Show the menu icon on smaller screens */
     }
 
     .search-form {
-        margin-top: 10px;
         width: 100%;
+        margin: 10px 0;
+        padding: 0 20px;
     }
 
     .search-input {
-        width: 100%;
+        width: 100%; /* Make the input take full width */
     }
 
     .search-button {
-        width: 100%;
+        width: 100%; /* Make the button take full width */
         margin-top: 5px;
     }
 }

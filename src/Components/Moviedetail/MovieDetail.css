@@ -1,97 +1,105 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #282c34;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #282c34;
+}
+
+.movie-header {
+  display: flex;
+  flex-direction: column; /* Change to column for better stacking on smaller screens */
+  margin: 20px;
+  background-color: #020b17;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures content stays within the borders */
+}
+
+.movie-poster {
+
+  height: 200px;
+width: 200px;
   
-  
-  
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.movie-info {
+  padding: 20px;
+  color: white;
+}
+
+.movie-info h1 {
+  font-size: 25px;
+  color: white;
+  margin-top: 15px;
+}
+
+.movie-info p {
+  margin: 5px 0;
+}
+
+.movie-overview {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  color: white;
+}
+
+.movie-backdrop {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Ensure it never exceeds the container's width */
+ 
+  border-radius: 10px;
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.movie-cast {
+  margin-top: 40px;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.cast-card {
+  text-align: center;
+}
+
+.cast-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cast-name {
+  font-weight: bold;
+}
+
+.cast-character {
+  color: #ccc;
+}
+
+@media (min-width: 768px) {
   .movie-header {
-    display: flex;
-    margin-bottom: 20px;
-    margin: 50px;
-    background-color:#020b17;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-  
+      flex-direction: row; /* Row layout for larger screens */
+  }
+
   .movie-poster {
-padding: 20px 20px;
-    width: 180px;
-    height: 220px;
-    margin-right: 20px;
-    border-radius: 5px;
+      width: auto;
+      max-width: 180px;
+      margin: 0 20px 20px 0;
   }
-  
+
   .movie-info {
-    padding-right: 100px;
-    max-width: 600px;
-    color: white; /* Ensure text is readable */
-
+      max-width: 600px;
   }
-  
-  .movie-info h1 {
 
-   font-size: 25px;
-   color: white;
-   margin-top: 15px;
-
-
-  }
-  
-  .movie-info p {
-    margin: 5px 0;
-  }
-  
-  .movie-overview {
-
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    color: white;
-  }
-  
   .movie-backdrop {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -ms-border-radius: 10px 10px 10px 10px;
-    -o-border-radius: 10px 10px 10px 10px;
+      border-radius: 10px;
+  }
 }
-  
-  .movie-cast {
-    margin-top: 40px;
-  }
-  
-  .cast-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
-  .cast-card {
-    text-align: center;
-  }
-  
-  .cast-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .cast-name {
-    font-weight: bold;
-  }
-  
-  .cast-character {
-    color: #ccc;
-  }
-  
