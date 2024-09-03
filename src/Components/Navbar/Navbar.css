@@ -6,7 +6,7 @@ nav {
     color: white;
     position: sticky;
     top: 0;
-    padding: 10px 20px; /* Adjust padding for better responsiveness */
+   
     z-index: 1000; /* Ensure navbar stays on top */
 }
 
@@ -148,3 +148,6 @@ nav .menu span {
         margin-top: 5px;
     }
 }
+
+
+

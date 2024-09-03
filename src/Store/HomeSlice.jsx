@@ -5,7 +5,7 @@ export const getdata = createAsyncThunk(
   "getCards",
   async (data, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://api.themoviedb.org/3/movie/popular?api_key=c45a857c193f6302f2b5061c3b85e743&language=en-US&page=${data}`);
+      const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=c45a857c193f6302f2b5061c3b85e743&language=en-US&page=${data}`);
       console.log("get Response", response);
   
       const result = await response.data;
