@@ -1,36 +1,64 @@
 .search-results-container2 {
     padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.movie-grid2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.movie-card2 {
     text-align: center;
-    background-color: #343a40;
+  }
+  
+  .movie-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 90px;
+    margin: 20px 50px 20px 50px;
+  }
+  
+  .movie-card2 {
     color: white;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.movie-poster2 {
+    text-decoration: none;
+  }
+  
+  .movie-poster2 {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+  }
+  
+  .movie-title2 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-decoration: none;
+  }
+  
+  .movie-rating2 {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .pagination-controls2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls2 button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
 }
-
-.movie-title2 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.movie-rating2 {
-    margin-top: 5px;
-    font-size: 1rem;
-    color: #ccc;
-}
+  
+  .pagination-controls2 button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination-controls2 span {
+    font-size: 16px;
+  }
+  
